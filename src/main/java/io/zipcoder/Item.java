@@ -6,6 +6,9 @@ public class Item {
     private String type;
     private String expiration;
 
+
+
+
     /**
      * Item should not be created unless you have all of the elements, which is why you are forcing
      * it to be set in the constructor. In ItemParser, if you do not find all the elements of a Item,
@@ -26,6 +29,9 @@ public class Item {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Double getPrice() {
         return price;
@@ -36,6 +42,10 @@ public class Item {
         return type;
     }
 
+    public void setType(String type) {
+        this.type = type;
+    }
+
 
     public String getExpiration() {
         return expiration;
@@ -43,6 +53,6 @@ public class Item {
 
     @Override
     public String toString(){
-        return "name:" + name + " price:" + price + " type:" + type + " expiration:" + expiration;
+        return "name: " + name + " price: " + price + " type: " + type + " expiration: " + expiration;
     }
 }

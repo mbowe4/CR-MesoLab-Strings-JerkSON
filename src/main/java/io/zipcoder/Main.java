@@ -2,6 +2,8 @@ package io.zipcoder;
 
 import org.apache.commons.io.IOUtils;
 
+import java.util.List;
+
 
 public class Main {
 
@@ -13,7 +15,13 @@ public class Main {
 
     public static void main(String[] args) throws Exception{
         String output = (new Main()).readRawDataToString();
-        System.out.println(output);
         // TODO: parse the data in output into items, and display to console.
+
+
+        ItemParser itemParser = new ItemParser();
+        List<Item> items = itemParser.parseStringIntoItemArray(output);
+
+        System.out.println(itemParser.formatData());
+
     }
 }
