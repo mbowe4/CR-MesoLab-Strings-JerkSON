@@ -35,8 +35,6 @@ public class ItemParser {
                 continue;
             }
         }
-
-
         throw(new ItemParseException());
     }
 
@@ -73,14 +71,9 @@ public class ItemParser {
             } catch (ArrayIndexOutOfBoundsException e) {
                 errorCount++;
                 continue;
-                //throw(new ItemParseException());
-
-
             }
         }
-
         return items;
-
     }
 
     public ArrayList<String> findKeyValuePairsInRawItemData(String rawItem){

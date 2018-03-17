@@ -15,13 +15,10 @@ public class Main {
 
     public static void main(String[] args) throws Exception{
         String output = (new Main()).readRawDataToString();
-        // TODO: parse the data in output into items, and display to console.
-
 
         ItemParser itemParser = new ItemParser();
-        List<Item> items = itemParser.parseStringIntoItemArray(output);
+        itemParser.parseStringIntoItemArray(output);
 
         System.out.println(itemParser.formatData());
-
     }
 }
